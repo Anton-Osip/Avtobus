@@ -35,10 +35,55 @@
         <button class = "btn btn-danger button--add w-100 ">
             Добавить контакт
         </button>
-        <div class = "emptyContacts">
-            <h4 class = "text-center text-secondary">Список контактов пуст</h4>
-        </div>
+        <!--        emptyContacts-->
+        <!--        <div class = "emptyContacts">-->
+        <!--            <h4 class = "text-center text-secondary">Список контактов пуст</h4>-->
+        <!--        </div>-->
+        <div class = "accordion " id = "accordionExample">
+            <div class = "accordion-item mt-4 p-4">
+                <h2 class = "accordion-header">
+                    <button class = "accordion-button" type = "button" data-bs-toggle = "collapse"
+                            data-bs-target = "#collapseOne" aria-expanded = "false" aria-controls = "collapseOne">
+                        Друзья
+                    </button>
+                </h2>
+                <div id = "collapseOne" class = "accordion-collapse collapse" data-bs-parent = "#accordionExample">
+                    <div class = "accordion-body p-0">
+                        <ul class = "list-group">
+                            <li class = "contacts list-group-item d-flex align-items-center justify-content-between py-3">
+                                <h4 class = "text-secondary">Фамилия Имя Отчество</h4>
+                                <div class = "d-flex align-items-center gap-3">
+                                    <h4>+7 (ХХХ) ХХХ - ХХ - ХХ</h4>
+                                    <button class = "btn btn-close-white border-light-subtle"
+                                            type = "button" data-bs-toggle = "modal" data-bs-target = "#staticBackdrop">
+                                        <img src = "assets/image/edit.svg" alt = "Книга контактов" class = "logo">
+                                    </button>
+                                    <button class = "btn btn-close-white border-light-subtle"
+                                            type = "button" data-bs-toggle = "modal" data-bs-target = "#staticBackdrop">
+                                        <img src = "assets/image/trash.svg" alt = "Книга контактов" class = "logo">
+                                    </button>
+                                </div>
+                            </li>
+                            <li class = " contacts list-group-item d-flex align-items-center justify-content-between">
+                                <h4 class = "text-secondary">Фамилия Имя Отчество</h4>
+                                <div class = "d-flex align-items-center gap-3">
+                                    <h4>+7 (ХХХ) ХХХ - ХХ - ХХ</h4>
+                                    <button class = "btn btn-close-white border-light-subtle"
+                                            type = "button" data-bs-toggle = "modal" data-bs-target = "#staticBackdrop">
+                                        <img src = "assets/image/edit.svg" alt = "Книга контактов" class = "logo">
+                                    </button>
+                                    <button class = "btn btn-close-white border-light-subtle"
+                                            type = "button" data-bs-toggle = "modal" data-bs-target = "#staticBackdrop">
+                                        <img src = "assets/image/trash.svg" alt = "Книга контактов" class = "logo">
+                                    </button>
+                                </div>
+                            </li>
 
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </main>
 
@@ -65,7 +110,19 @@
                 </span>
             </div>
         </div>
+        <input class = "form-control bg-body-secondary border-0" type = "text" placeholder = "Default input"
+               aria-label = "default input example">
 
+        <input class = "form-control bg-body-secondary border-danger border-1" type = "text"
+               placeholder = "Default input"
+               aria-label = "default input example">
+        <span class = "text-danger">Поле является обязательным </span>
+        <!--        <select class="form-select bg-body-secondary border-0" aria-label="Default select example">-->
+        <!--            <option selected>Open this select menu</option>-->
+        <!--            <option value="1">One</option>-->
+        <!--            <option value="2">Two</option>-->
+        <!--            <option value="3">Three</option>-->
+        <!--        </select>-->
     </div>
     <div class = "offcanvas-footer">
         <div class = "d-flex align-items-center justify-content-end gap-3 p-4">
@@ -104,6 +161,9 @@
         </div>
     </div>
 </div>
+
+<!--toast-->
+
 
 </body>
 </html>

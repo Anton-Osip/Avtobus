@@ -51,6 +51,16 @@ main .button--add {
     justify-content: center;
     height: calc(100vh - 134px);
   }
+  .contacts {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 16px;
+    padding: 24px 0;
+    &>div{
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
 }
 
 
