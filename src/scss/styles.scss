@@ -4,6 +4,7 @@
 @import "fonts";
 @import "./block/header";
 @import "./block/button";
+@import "./block/offcanvas";
 
 * {
   margin: 0;
@@ -23,3 +24,5 @@ body {
   font-family: var(--regular-font), serif;
   color: #000;
 }
+
+

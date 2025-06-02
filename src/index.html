@@ -14,11 +14,80 @@
                 <span class = "logo__text text-primary fs-5">Книга контактов</span>
             </div>
             <div class = "header__button button d-flex align-items-center gap-3">
-                <button class = "btn btn-danger button--add">Добавить контакт</button>
-                <button class = "btn btn-primary">Группы</button>
+                <button class = "btn btn-danger button--add">
+                    Добавить контакт
+                </button>
+                <button class = "btn btn-primary"
+                        type = "button"
+                        data-bs-toggle = "offcanvas"
+                        data-bs-target = "#offcanvasGroups"
+                        aria-controls = "offcanvasGroups">
+                    Группы
+                </button>
             </div>
         </div>
     </div>
 </header>
+<main></main>
+
+
+<!--offcanvas-->
+<div class = "offcanvas offcanvas-start w-20" tabindex = "-1" id = "offcanvasGroups"
+     aria-labelledby = "offcanvasGroups">
+    <div class = "offcanvas-header">
+        <h5 class = "offcanvas-title" id = "offcanvasGroupsLabel">Группы контактов</h5>
+        <button type = "button" class = "btn-close" data-bs-dismiss = "offcanvas" aria-label = "Close"></button>
+    </div>
+    <div class = "offcanvas-body">
+        <div class = "row g-3 align-items-center">
+            <div class = "col-auto">
+                <input class = "form-control bg-body-secondary border-0" type = "text" placeholder = "Default input"
+                       aria-label = "default input example">
+            </div>
+            <div class = "col-auto">
+                <span id = "passwordHelpInline" class = "form-text">
+                  <button class = "btn btn-close-white border-light-subtle"
+                          type = "button" data-bs-toggle = "modal" data-bs-target = "#staticBackdrop">
+                    <img src = "assets/image/trash.svg" alt = "Книга контактов" class = "logo">
+                  </button>
+                </span>
+            </div>
+        </div>
+
+    </div>
+    <div class = "offcanvas-footer">
+        <div class = "d-flex align-items-center justify-content-end gap-3 p-4">
+            <button class = "btn btn-outline-primary"
+                    type = "button">
+                Добавить
+            </button>
+            <button class = "btn btn-primary"
+                    type = "button">
+                Сохранить
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class = "modal fade" id = "staticBackdrop" aria-hidden = "true" aria-labelledby = "exampleModalToggleLabel"
+     tabindex = "-1">
+    <div class = "modal-dialog modal-dialog-centered">
+        <div class = "modal-content">
+            <div class = "modal-header">
+                <h1 class = "modal-title fs-5" id = "exampleModalToggleLabel">Удалить группу?</h1>
+                <button type = "button" class = "btn-close" data-bs-dismiss = "modal" aria-label = "Close"></button>
+            </div>
+            <div class = "modal-body">
+                Удаление группы повлечет за собой удаление контактов связанных с этой группой
+            </div>
+            <div class = "modal-footer">
+                <button type = "button" class = "btn btn-primary" data-bs-dismiss = "modal">Да, удалить</button>
+                <button type = "button" class = "btn btn-primary" data-bs-dismiss="modal">Отмена</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
