@@ -1,0 +1,12 @@
+.button--add {
+  padding-right: 38px;
+  position: relative;
+
+  &:after {
+    content: '+';
+    font-size: 20px;
+    position: absolute;
+    color: var(--white-color);
+    top: 5px;
+    right: 10px;
+  }}

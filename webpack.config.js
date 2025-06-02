@@ -1,10 +1,11 @@
 const path = require('path')
 const autoprefixer = require('autoprefixer')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     mode: 'development',
-    entry: './src/ts/main.ts', // замените на TypeScript файл
+    entry: './src/ts/main.ts',
     output: {
         filename: 'main.js',
         path: path.resolve(__dirname, 'dist')
@@ -15,13 +16,25 @@ module.exports = {
         hot: true
     },
     resolve: {
-        extensions: ['.ts', '.js'], // добавьте расширения для разрешения
+        extensions: ['.ts', '.js'],
     },
     plugins: [
-        new HtmlWebpackPlugin({ template: './src/index.html' })
+        new HtmlWebpackPlugin({template: './src/index.html'}),
+        new CopyWebpackPlugin({
+            patterns: [
+                {from: 'src/assets', to: 'assets'} // копирует assets в dist/assets
+            ],
+        }),
     ],
     module: {
         rules: [
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'assets/image/[name][ext]'
+                }
+            },
             {
                 test: /\.(scss)$/,
                 use: [
@@ -51,10 +64,12 @@ module.exports = {
                 ]
             },
             {
-                test: /\.ts$/, // правило для TypeScript
+                test: /\.ts$/,
                 use: 'ts-loader',
                 exclude: /node_modules/
-            }
+            },
+
+
         ]
     }
 }

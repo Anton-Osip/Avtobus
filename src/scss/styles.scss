@@ -1,1 +1,25 @@
 @import 'bootstrap/scss/bootstrap';
+@import "reset";
+@import "variables";
+@import "fonts";
+@import "./block/header";
+@import "./block/button";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+body {
+  font-family: var(--regular-font), serif;
+  color: #000;
+}

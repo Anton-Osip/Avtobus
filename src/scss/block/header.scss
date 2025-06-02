@@ -1,0 +1,13 @@
+.header {
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05);
+  background: rgb(255, 255, 255);
+
+
+}
+
+@media (max-width: 576px) {
+  .header__button .button--add {
+    display: none;
+  }
+}
+
