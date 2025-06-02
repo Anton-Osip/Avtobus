@@ -6,9 +6,10 @@
     <title>Bootstrap w/ Webpack</title>
 </head>
 <body>
+<!--header-->
 <header class = "header">
     <div class = "container">
-        <div class = "header__container d-flex justify-content-between align-items-center py-4">
+        <div class = "header__container d-flex justify-content-between align-items-center py-3">
             <div class = "logo header__logo d-flex justify-content-between align-items-center gap-3">
                 <img src = "assets/image/logo.svg" alt = "Книга контактов" class = "logo">
                 <span class = "logo__text text-primary fs-5">Книга контактов</span>
@@ -28,7 +29,18 @@
         </div>
     </div>
 </header>
-<main></main>
+
+<main>
+    <div class = "container pt-4">
+        <button class = "btn btn-danger button--add w-100 ">
+            Добавить контакт
+        </button>
+        <div class = "emptyContacts">
+            <h4 class = "text-center text-secondary">Список контактов пуст</h4>
+        </div>
+
+    </div>
+</main>
 
 
 <!--offcanvas-->
@@ -57,7 +69,7 @@
     </div>
     <div class = "offcanvas-footer">
         <div class = "d-flex align-items-center justify-content-end gap-3 p-4">
-            <button class = "btn btn-outline-primary"
+            <button class = "btn btn-outline-primary border-0"
                     type = "button">
                 Добавить
             </button>
@@ -74,17 +86,21 @@
      tabindex = "-1">
     <div class = "modal-dialog modal-dialog-centered">
         <div class = "modal-content">
-            <div class = "modal-header">
-                <h1 class = "modal-title fs-5" id = "exampleModalToggleLabel">Удалить группу?</h1>
+            <div class = "modal-header border-0">
                 <button type = "button" class = "btn-close" data-bs-dismiss = "modal" aria-label = "Close"></button>
             </div>
             <div class = "modal-body">
-                Удаление группы повлечет за собой удаление контактов связанных с этой группой
+                <h1 class = "modal-title fs-5 text-center mb-4" id = "exampleModalToggleLabel">Удалить группу?</h1>
+                <h4 class = "text-center mb-4">Удаление группы повлечет за собой удаление контактов связанных с этой
+                    группой</h4>
             </div>
-            <div class = "modal-footer">
+            <div class = "d-flex align-items-center justify-content-center gap-2 pb-5">
                 <button type = "button" class = "btn btn-primary" data-bs-dismiss = "modal">Да, удалить</button>
-                <button type = "button" class = "btn btn-primary" data-bs-dismiss="modal">Отмена</button>
+                <button type = "button" class = "btn btn-outline-primary border-0" data-bs-dismiss = "modal">Отмена
+                </button>
             </div>
+
+
         </div>
     </div>
 </div>

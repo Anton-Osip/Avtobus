@@ -25,4 +25,33 @@ body {
   color: #000;
 }
 
+main {
+  background: #F6F7F9;
+  min-height: calc(100vh - 70px);
+}
+
+main .button--add {
+  display: none;
+}
+
+.emptyContacts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 95px);
+}
+
+@media (max-width: 576px) {
+  main .button--add {
+    display: inline-block;
+  }
+  .emptyContacts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 134px);
+  }
+}
+
+
 
